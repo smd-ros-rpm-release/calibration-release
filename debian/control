@@ -1,0 +1,13 @@
+Source: ros-groovy-calibration-msgs
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-geometry-msgs,ros-groovy-genmsg,ros-groovy-catkin,ros-groovy-std-msgs,ros-groovy-langs-dev,ros-groovy-sensor-msgs
+Homepage: http://www.ros.org/wiki/calibration_msgs
+Standards-Version: 3.9.2
+
+Package: ros-groovy-calibration-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-geometry-msgs,ros-groovy-sensor-msgs,ros-groovy-std-msgs
+Description: This package defines messages for storing calibration samples to be used in full robot calibration procedures. This package is still unstable. Expect the messages to change.
+
