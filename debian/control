@@ -1,0 +1,13 @@
+Source: ros-groovy-settlerlib
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-rostime,ros-groovy-calibration-msgs,ros-groovy-rosconsole,libboost1.46-all-dev
+Homepage: http://www.ros.org/wiki/settlerlib
+Standards-Version: 3.9.2
+
+Package: ros-groovy-settlerlib
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-rostime,ros-groovy-calibration-msgs,ros-groovy-rosconsole,libboost1.46-all-dev
+Description: Defines helper functions and routines that greatly help when trying to create a settler for a specific sensor channel. This package is experimental and unstable. Expect its APIs to change.
+
