@@ -1,0 +1,13 @@
+Source: ros-groovy-calibration
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), 
+Homepage: http://www.ros.org/wiki/ros_comm
+Standards-Version: 3.9.2
+
+Package: ros-groovy-calibration
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-calibration-launch,ros-groovy-image-cb-detector,ros-groovy-calibration-msgs,ros-groovy-calibration-estimation,ros-groovy-monocam-settler,ros-groovy-laser-cb-detector,ros-groovy-interval-intersection,ros-groovy-joint-states-settler,ros-groovy-settlerlib
+Description: Provides a toolchain running through the robot calibration process. This involves capturing calibration data, estimating parameters, and then updating the URDF.
+
