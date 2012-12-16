@@ -1,0 +1,12 @@
+Source: ros-groovy-image-cb-detector
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin,ros-groovy-roscpp,ros-groovy-message-filters,ros-groovy-std-msgs,ros-groovy-actionlib,ros-groovy-sensor-msgs,ros-groovy-image-transport,ros-groovy-opencv2,ros-groovy-geometry-msgs,ros-groovy-calibration-msgs,ros-groovy-pcl,ros-groovy-message-generation,ros-groovy-cv-bridge,ros-groovy-actionlib-msgs,ros-groovy-pcl-ros
+Homepage: http://ros.org/wiki/image_cb_detector
+Standards-Version: 3.9.2
+
+Package: ros-groovy-image-cb-detector
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-roscpp,ros-groovy-message-filters,ros-groovy-std-msgs,ros-groovy-actionlib,ros-groovy-message-runtime,ros-groovy-sensor-msgs,ros-groovy-image-transport,ros-groovy-opencv2,ros-groovy-geometry-msgs,ros-groovy-calibration-msgs,ros-groovy-pcl,ros-groovy-cv-bridge,ros-groovy-actionlib-msgs,ros-groovy-pcl-ros
+Description: Provide a node that extracts checkerboard corners from ROS images. This package is still experimental and unstable. Expect its APIs to change.
