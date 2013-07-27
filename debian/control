@@ -1,0 +1,12 @@
+Source: ros-hydro-image-cb-detector
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-actionlib, ros-hydro-actionlib-msgs, ros-hydro-calibration-msgs, ros-hydro-catkin, ros-hydro-cv-bridge, ros-hydro-geometry-msgs, ros-hydro-image-transport, ros-hydro-message-filters, ros-hydro-message-generation, ros-hydro-opencv2, ros-hydro-pcl, ros-hydro-pcl-ros, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-std-msgs
+Homepage: http://ros.org/wiki/image_cb_detector
+Standards-Version: 3.9.2
+
+Package: ros-hydro-image-cb-detector
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-actionlib, ros-hydro-actionlib-msgs, ros-hydro-calibration-msgs, ros-hydro-cv-bridge, ros-hydro-geometry-msgs, ros-hydro-image-transport, ros-hydro-message-filters, ros-hydro-message-runtime, ros-hydro-opencv2, ros-hydro-pcl, ros-hydro-pcl-ros, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-std-msgs
+Description: Provide a node that extracts checkerboard corners from ROS images. This package is still experimental and unstable. Expect its APIs to change.
