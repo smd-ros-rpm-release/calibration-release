@@ -1,0 +1,12 @@
+Source: ros-hydro-settlerlib
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), libboost-all-dev, ros-hydro-calibration-msgs, ros-hydro-catkin, ros-hydro-rosconsole, ros-hydro-rostime
+Homepage: http://www.ros.org/wiki/settlerlib
+Standards-Version: 3.9.2
+
+Package: ros-hydro-settlerlib
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, ros-hydro-calibration-msgs, ros-hydro-rosconsole, ros-hydro-rostime
+Description: Defines helper functions and routines that greatly help when trying to create a settler for a specific sensor channel. This package is experimental and unstable. Expect its APIs to change.
