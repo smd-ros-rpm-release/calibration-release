@@ -1,0 +1,12 @@
+Source: ros-groovy-calibration-estimation
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin
+Homepage: http://ros.org/wiki/calibration_estimation
+Standards-Version: 3.9.2
+
+Package: ros-groovy-calibration-estimation
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-matplotlib, python-scipy, python-tk, ros-groovy-calibration-msgs, ros-groovy-rospy, ros-groovy-rostest, ros-groovy-sensor-msgs, ros-groovy-tf, ros-groovy-visualization-msgs
+Description: Runs an optimization to estimate the a robot's kinematic parameters. This package is a generic rewrite of pr2_calibration_estimation.
