@@ -1,0 +1,12 @@
+Source: ros-groovy-joint-states-settler
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vrabaud@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-actionlib, ros-groovy-actionlib-msgs, ros-groovy-catkin, ros-groovy-rosconsole, ros-groovy-roscpp, ros-groovy-roscpp-serialization, ros-groovy-settlerlib, ros-groovy-std-msgs
+Homepage: http://www.ros.org/wiki/joint_states_settler
+Standards-Version: 3.9.2
+
+Package: ros-groovy-joint-states-settler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-actionlib, ros-groovy-actionlib-msgs, ros-groovy-rosconsole, ros-groovy-roscpp, ros-groovy-roscpp-serialization, ros-groovy-settlerlib, ros-groovy-std-msgs
+Description: Provides a node that reports how long a subset of joints has been settled. That is, it calculates how long a set of joints has remained within a specified threshold. This package is experimental and unstable. Expect its APIs to change.
