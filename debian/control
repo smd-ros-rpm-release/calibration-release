@@ -1,0 +1,12 @@
+Source: ros-hydro-calibration-msgs
+Section: misc
+Priority: extra
+Maintainer: Vincent Rabaud <vincent.rabaud@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-geometry-msgs, ros-hydro-message-generation, ros-hydro-sensor-msgs, ros-hydro-std-msgs
+Homepage: http://www.ros.org/wiki/calibration_msgs
+Standards-Version: 3.9.2
+
+Package: ros-hydro-calibration-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-geometry-msgs, ros-hydro-message-runtime, ros-hydro-sensor-msgs, ros-hydro-std-msgs
+Description: This package defines messages for storing calibration samples to be used in full robot calibration procedures. This package is still unstable. Expect the messages to change.
