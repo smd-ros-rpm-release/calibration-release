@@ -163,7 +163,7 @@ if __name__ == '__main__':
 
         m = Marker()
         m.header.frame_id = system_def.base_link
-        m.ns = loop_list_filename+"_points_3d"
+        m.ns = "points_3d"
         m.id = marker_count
         m.type = Marker.SPHERE_LIST
         m.action = Marker.MODIFY
@@ -178,7 +178,7 @@ if __name__ == '__main__':
         marker_pub.publish(m)
 
         m.points = points_list_guess
-        m.ns = loop_list_filename+"_points_cam"
+        m.ns = "points_cam"
         m.color.r = 1.0
         m.color.g = 0.0
         m.color.b = 0.0
@@ -193,16 +193,12 @@ if __name__ == '__main__':
         proj_points = [s.compute_expected(pts) for (s,pts) in zip(cam_sensors,fk_points)]
         meas_points = [s.get_measurement() for s in cam_sensors]
 
-        r1 = numpy.concatenate(meas_points)
-        r2 = numpy.concatenate(proj_points)
-        r = numpy.concatenate((r1,r2),axis=0)
+        r = numpy.concatenate(proj_points) - numpy.concatenate(meas_points)
 
         import matplotlib.pyplot as plt
-        
         cur_scatter = plt.scatter(array(r)[:,0], array(r)[:,1], **cur_loop['plot_ops'])
         scatter_list.append(cur_scatter)
-        
-    plt.gca().invert_yaxis()
+
     plt.axis('equal')
     plt.grid(True)
     plt.legend(scatter_list, [x['name'] for x in label_list], prop={'size':'x-small'})

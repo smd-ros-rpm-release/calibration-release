@@ -37,7 +37,7 @@
 import roslib; roslib.load_manifest('calibration_estimation')
 import rospy
 
-from urdf_parser_py.urdf import *
+from urdf_python.urdf import *
 import yaml
 import numpy
 from numpy import matrix, vsplit, sin, cos, reshape, zeros, pi
@@ -119,8 +119,8 @@ class UrdfParams:
         cur_index = 0
 
         # clean up joints
-        for joint_name in urdf.joint_map.keys():
-            j = urdf.joint_map[joint_name]
+        for joint_name in urdf.joints.keys():
+            j = urdf.joints[joint_name]
             if j.origin == None:
                 j.origin = Pose([0.0, 0.0, 0.0], [0.0, 0.0, 0.0])
             if j.origin.rotation == None:
@@ -130,9 +130,9 @@ class UrdfParams:
 
         # build our transforms
         self.transforms = dict()
-        for joint_name in urdf.joint_map.keys():
+        for joint_name in urdf.joints.keys():
             joint_name = str(joint_name)
-            j = urdf.joint_map[joint_name]
+            j = urdf.joints[joint_name]
             rot = j.origin.rotation
             rot = RPY_to_angle_axis(rot)
             p = j.origin.position + rot
@@ -166,20 +166,20 @@ class UrdfParams:
             this_config['cov'] = config_dict['chains'][chain_name]['cov']
             for joint_name in this_config["joints"]:
                 this_config['transforms'][joint_name] = self.transforms[joint_name]
-                if urdf.joint_map[joint_name].joint_type in ['revolute','continuous'] :
+                if urdf.joints[joint_name].joint_type in ['revolute','continuous'] :
                     this_config["active_joints"].append(joint_name)
-                    axis = urdf.joint_map[joint_name].axis
+                    axis = list(urdf.joints[joint_name].axis.split())
                     this_config["axis"].append( sum( [i[0]*int(i[1]) for i in zip([4,5,6], axis)] ) )
                     # we can handle limited rotations here
-                    rot = urdf.joint_map[joint_name].origin.rotation
+                    rot = urdf.joints[joint_name].origin.rotation
                     if rot != None and (sum([abs(x) for x in rot]) - rot[abs(this_config["axis"][-1])-4]) > 0.001:   
                         print 'Joint origin is rotated, calibration will fail: ', joint_name
-                elif urdf.joint_map[joint_name].joint_type == 'prismatic':
+                elif urdf.joints[joint_name].joint_type == 'prismatic':
                     this_config["active_joints"].append(joint_name)
-                    axis = list(urdf.joint_map[joint_name].axis.split())
+                    axis = list(urdf.joints[joint_name].axis.split())
                     this_config["axis"].append( sum( [i[0]*int(i[1]) for i in zip([1,2,3], axis)] ) )
-                elif urdf.joint_map[joint_name].joint_type != 'fixed':
-                    print 'Unknown joint type:', urdf.joint_map[joint_name].joint_type
+                elif urdf.joints[joint_name].joint_type != 'fixed':
+                    print 'Unknown joint type:', urdf.joints[joint_name].joint_type
             # put a checkerboard in it's hand
             self.urdf.add_link(Link(chain_name+"_cb_link"))
             self.urdf.add_joint(Joint(chain_name+"_cb",this_config['tip'],chain_name+"_cb_link","fixed",origin=Pose([0.0,0.0,0.0],[0.0,0.0,0.0])))
@@ -243,13 +243,13 @@ class UrdfParams:
 
     def get_clean_urdf(self):
         ''' Remove checkerboard links/joints. '''
-        for joint in self.urdf.joint_map.keys():
+        for joint in self.urdf.joints.keys():
             if joint in self.fakes:
-                self.urdf.elements.remove(self.urdf.joint_map[joint])
-                del self.urdf.joint_map[joint]
-        for link in self.urdf.link_map.keys():
+                self.urdf.elements.remove(self.urdf.joints[joint])
+                del self.urdf.joints[joint]
+        for link in self.urdf.links.keys():
             if link in self.fakes:
-                self.urdf.elements.remove(self.urdf.link_map[link])
-                del self.urdf.link_map[link]
+                self.urdf.elements.remove(self.urdf.links[link])
+                del self.urdf.links[link]
         return self.urdf
 
