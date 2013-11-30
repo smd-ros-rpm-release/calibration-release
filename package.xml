@@ -1,6 +1,6 @@
 <package>
   <name>calibration_launch</name>
-  <version>0.10.3</version>
+  <version>0.10.4</version>
   <description>
     This package contains a collection of launch files that can be helpful in configuring
     the calibration stack to run on your robot.
@@ -10,6 +10,12 @@
 
   <license>BSD</license>
   <url>http://ros.org/wiki/calibration_launch</url>
+
+  <run_depend>interval_intersection</run_depend>
+  <run_depend>joint_states_settler</run_depend>
+  <run_depend>laser_cb_detector</run_depend>
+  <run_depend>monocam_settler</run_depend>
+  <run_depend>urdfdom_py</run_depend>
 
   <buildtool_depend>catkin</buildtool_depend>
 </package>
