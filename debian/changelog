@@ -1,0 +1,13 @@
+ros-hydro-calibration-estimation (0.10.7-0precise) precise; urgency=high
+
+  * fix more issues related to #21
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Tue, 14 Jan 2014 23:00:00 -0000
+
+ros-hydro-calibration-estimation (0.10.6-0precise) precise; urgency=high
+
+  * fix #21
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Sat, 07 Dec 2013 23:00:00 -0000
+
+
