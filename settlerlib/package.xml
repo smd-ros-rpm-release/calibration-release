@@ -1,6 +1,6 @@
 <package>
   <name>settlerlib</name>
-  <version>0.10.7</version>
+  <version>0.10.8</version>
   <description>
     Defines helper functions and routines that greatly help when trying to create a settler
     for a specific sensor channel. This package is experimental and unstable.
@@ -11,7 +11,7 @@
   <license>BSD</license>
   <url>http://www.ros.org/wiki/settlerlib</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend version_gte="0.5.68">catkin</buildtool_depend>
 
   <build_depend>boost</build_depend>
   <build_depend>calibration_msgs</build_depend>
