@@ -1,0 +1,25 @@
+ros-hydro-calibration-launch (0.10.9-0precise) precise; urgency=high
+
+
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Tue, 08 Apr 2014 22:00:00 -0000
+
+ros-hydro-calibration-launch (0.10.8-0precise) precise; urgency=high
+
+
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Thu, 06 Mar 2014 23:00:00 -0000
+
+ros-hydro-calibration-launch (0.10.5-0precise) precise; urgency=high
+
+  * fix bad install
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Sat, 30 Nov 2013 23:00:00 -0000
+
+ros-hydro-calibration-launch (0.10.4-0precise) precise; urgency=high
+
+  * fix calibration_executive to work with the new urdf_python #20
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Fri, 29 Nov 2013 23:00:00 -0000
+
+
