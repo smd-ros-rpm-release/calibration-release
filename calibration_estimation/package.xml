@@ -1,6 +1,6 @@
 <package>
   <name>calibration_estimation</name>
-  <version>0.10.9</version>
+  <version>0.10.10</version>
   <description>
     Runs an optimization to estimate the a robot's kinematic parameters. This package is a
     generic rewrite of pr2_calibration_estimation.
@@ -23,4 +23,8 @@
   <run_depend>tf</run_depend>
   <run_depend>urdfdom_py</run_depend>
   <run_depend>visualization_msgs</run_depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
 </package>
