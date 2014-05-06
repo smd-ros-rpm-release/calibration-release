@@ -1,6 +1,6 @@
 <package>
   <name>calibration_launch</name>
-  <version>0.10.9</version>
+  <version>0.10.10</version>
   <description>
     This package contains a collection of launch files that can be helpful in configuring
     the calibration stack to run on your robot.
@@ -18,4 +18,8 @@
   <run_depend>urdfdom_py</run_depend>
 
   <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
 </package>
