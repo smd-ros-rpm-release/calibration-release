@@ -1,3 +1,10 @@
+0.10.11 (2014-09-20)
+--------------------
+* add warning if robot_description is not present in bag file
+* axis is already list
+* -Add markers showing id of calibration targets
+* Contributors: Kei Okada, Stefan Kohlbrecher
+
 0.10.10 (2014-05-06)
 --------------------
 * Export architecture_independent flag in package.xml
