@@ -1,0 +1,42 @@
+ros-indigo-calibration-estimation (0.10.11-0trusty) trusty; urgency=high
+
+  * add warning if robot_description is not present in bag file
+  * axis is already list
+  * -Add markers showing id of calibration targets
+  * Contributors: Kei Okada, Stefan Kohlbrecher
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Fri, 19 Sep 2014 22:00:00 -0000
+
+ros-indigo-calibration-estimation (0.10.10-0trusty) trusty; urgency=high
+
+  * Export architecture_independent flag in package.xml
+  * Contributors: Scott K Logan
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Mon, 05 May 2014 22:00:00 -0000
+
+ros-indigo-calibration-estimation (0.10.9-0trusty) trusty; urgency=high
+
+
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Tue, 08 Apr 2014 22:00:00 -0000
+
+ros-indigo-calibration-estimation (0.10.8-0trusty) trusty; urgency=high
+
+  * check for CATKIN_ENABLE_TESTING
+  * Contributors: Lukas Bulwahn
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Thu, 06 Mar 2014 23:00:00 -0000
+
+ros-indigo-calibration-estimation (0.10.7-0trusty) trusty; urgency=high
+
+  * fix more issues related to #21
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Tue, 14 Jan 2014 23:00:00 -0000
+
+ros-indigo-calibration-estimation (0.10.6-0trusty) trusty; urgency=high
+
+  * fix #21
+
+ -- Vincent Rabaud <vincent.rabaud@gmail.com>  Sat, 07 Dec 2013 23:00:00 -0000
+
+
