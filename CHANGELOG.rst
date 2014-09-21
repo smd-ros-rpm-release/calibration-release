@@ -2,6 +2,11 @@
 Changelog for package image_cb_detector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.10.12 (2014-09-21)
+--------------------
+* make code compile with OpenCV3
+* Contributors: Vincent Rabaud
+
 0.10.11 (2014-09-20)
 --------------------
 * check if input depth image is 32bit
